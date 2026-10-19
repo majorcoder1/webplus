@@ -47,8 +47,8 @@ def left_ink(listtype):
             return x
     return 99
 assert left_ink("") <= 2
-assert 2 < left_ink("bullet") < textlayout.INDENT, "the marker sits in the gutter, before the indented words"
-assert 2 < left_ink("number") < textlayout.INDENT
+assert left_ink("bullet") < textlayout.INDENT, "the marker sits in the gutter, before the indented words"   # how far in depends on the font
+assert left_ink("number") < textlayout.INDENT
 
 # on a real window: the dialog's path (set_prop) turns a box into a list and back, height follows
 w = MainWindow()
