@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=WebPlus
+GenericName=Website Designer
+Comment=Design and publish websites by dragging things onto a page
+Exec=webplus %f
+Icon=live.fourthepeople.WebPlus
+Terminal=false
+Categories=Development;WebDevelopment;
+MimeType=application/x-sitewright;
+Keywords=website;web;design;html;site;page;blog;shop;
+StartupWMClass=live.fourthepeople.WebPlus

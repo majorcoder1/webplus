@@ -1,0 +1,367 @@
+# Sitewright master checklist
+
+Built on 2026-10-17 by comparing every command in the WebPlus X8 main menu bar (read from the program's own resource table) with every command in Sitewright's menus. `[x]` done, `[ ]` to do, `[-]` not offered. Work goes top to bottom inside each menu; each line is one sitting. WebPlus is used only to learn what features exist. Everything is written fresh.
+
+Totals: see the section headings (kept up by hand as work is done).
+
+## File (16/26 done)
+- [x] New
+- [x] Startup Assistant
+- [x] Open
+- [x] Revert
+- [x] Close
+- [-] Close All  _not offered: single window_
+- [x] Save
+- [x] Save As
+- [x] Save As Package
+- [-] Backup Site to Web  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Preview Site > Preview in Window (Internet Explorer)  _not offered (Windows-only, online service or WebPlus-only)_
+- [x] Preview Site > Preview in Browser
+- [x] Preview Site > Estimate Download Time
+- [x] Preview Site > View Site Online
+- [-] Preview Site > Browser Preview List  _not offered: uses the system browser_
+- [-] Preview Site > Disable Page Redirects when Previewing  _not offered: WebPlus-only_
+- [x] Publish Site > Publish to Web
+- [x] Publish Site > Quick Publish to Web
+- [x] Publish Site > Publish to Disk Folder
+- [x] Publish Site > Publish as PDF
+- [x] Publish Site > Publish Options
+- [-] Publish Site > Maintain Web Site  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Print  _not offered: use the browser's print_
+- [-] Send Document  _not offered (Windows-only, online service or WebPlus-only)_
+- [x] Recent File
+- [x] Exit
+
+## Edit (19/22 done)
+- [x] Undo
+- [x] Redo
+- [x] Cut
+- [x] Copy
+- [x] Paste
+- [x] Advanced Paste > Paste in Place
+- [x] Advanced Paste > Paste Format
+- [x] Advanced Paste > Paste Format Plus
+- [x] Advanced Paste > Paste Special
+- [x] Advanced Paste > Paste as Unformatted Text
+- [x] Replicate
+- [x] Select > Select All
+- [x] Select > Select Similar
+- [x] Select > Select Parent  (done 2026-10-17)
+- [x] Clear
+- [x] Delete Object
+- [x] Lock Object
+- [x] Convert To > Picture
+- [-] Convert To > Picture Frame  _not offered: n/a_
+- [-] Convert To > Curves  _not offered: drawing-program feature_
+- [x] Convert To > HTML Fragment
+- [x] Delete Page
+
+## View (19/32 done)
+- [x] Site Structure
+- [x] Page HTML Source
+- [x] Master Page
+- [x] Previous Page
+- [x] Next Page
+- [x] Zoom > Full Page
+- [x] Zoom > Page Width
+- [x] Zoom > Selection
+- [x] Zoom > 50%
+- [x] Zoom > 75%
+- [x] Zoom > 100%
+- [x] Zoom > 200%
+- [x] Zoom > 400%
+- [x] Zoom > 800%
+- [x] Rulers  (done 2026-10-17)
+- [x] Guide Lines
+- [-] Frame Edges  _not offered: n/a_
+- [x] Snapping Grid
+- [x] Hidden Objects
+- [-] Special Characters  _not offered: Insert symbols covers it_
+- [-] Spaces  _not offered: n/a_
+- [x] Variables
+- [-] Toolbars > Toolbars  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Tabs > Show/Hide Tabs  _not offered (Windows-only, online service or WebPlus-only)_
+- [x] Tabs > Save Workspace
+- [-] Tabs > Load Workspace  _not offered (Windows-only, online service or WebPlus-only)_
+- [x] Tabs > Default Workspace
+- [-] Tabs > Tab List  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Sites Bar > Always Hide  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Sites Bar > Show Automatically  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Sites Bar > Always Show  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Hintline  _not offered (Windows-only, online service or WebPlus-only)_
+
+## Insert (34/57 done)
+- [x] Blank Page
+- [x] Master Page
+- [x] Page from Template
+- [x] Asset
+- [x] Text Frame
+- [x] Picture > From File
+- [x] Picture > From Assets
+- [-] Picture > Remote Link  _not offered: covered by picture URL_
+- [-] Picture/From Scanner... > Select TWAIN Source  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Picture/From Scanner... > Select WIA Source  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Picture/From Scanner... > Acquire  _not offered (Windows-only, online service or WebPlus-only)_
+- [x] Picture > Empty Frame  (done 2026-10-17)
+- [x] Photo Gallery
+- [x] Panel
+- [x] Table > Table
+- [x] Table > Calendar
+- [x] Navigation > Navigation Bar
+- [x] Navigation > Button
+- [x] Interactive Object > Slider
+- [x] Interactive Object > Rollover  (done 2026-10-17)
+- [x] Interactive Object > Pop-Up Rollover  (done 2026-10-17)
+- [x] Interactive Object > Google Map
+- [-] Interactive Object > Java Applet  _not offered (Windows-only, online service or WebPlus-only)_
+- [x] Interactive Object > Animated Marquee
+- [-] Interactive Object > Google Adsense Advertisement  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Smart Object  _not offered: WebPlus-only object type_
+- [x] Media > Video Player
+- [x] Media > YouTube Video
+- [-] Media > Vimeo Video  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Media > Flash  _not offered (Windows-only, online service or WebPlus-only)_
+- [x] Media > Animated GIF  (done 2026-10-17)
+- [x] Media > Audio Player
+- [x] Media > Sound  (done 2026-10-17)
+- [x] Form > Form Designer
+- [x] Form > New Blank Form
+- [x] Form > Button
+- [x] Form > Edit Box
+- [x] Form > Date Picker
+- [x] Form > Text Area
+- [x] Form > Combo Box
+- [x] Form > Check Box
+- [x] Form > Radio Button
+- [x] Form > File Upload
+- [x] Form > CAPTCHA  (done 2026-10-17)
+- [x] Form > reCAPTCHA™  (done 2026-10-17)
+- [-] E-Commerce Object  _not offered (Windows-only, online service or WebPlus-only)_
+- [x] RSS / Podcast > RSS Feed / Podcast
+- [x] RSS / Podcast > RSS Reader  (done 2026-10-17)
+- [-] Social Media > Facebook Widget  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Social Media > Twitter Widget  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Social Media > Google +1 Button  _not offered (Windows-only, online service or WebPlus-only)_
+- [x] Social Media > Social Bookmarking Button Strip
+- [x] Site Search > Site Search Form
+- [x] Site Search > Site Search Results
+- [x] Document Frame
+- [x] HTML Fragment
+- [x] Hotspot  (done 2026-10-17)
+
+## Properties (8/25 done)
+- [x] ID and Anchor  (done 2026-10-17)
+- [x] Hyperlink
+- [x] Actions  (done 2026-10-17)
+- [x] CSS Properties  (done 2026-10-17)
+- [x] HTML Attributes  (done 2026-10-17)
+- [x] Export Options
+- [x] Pop-Up Menu
+- [x] HTML Source
+- [-] Reminder tasks  _not offered (Windows-only, online service or WebPlus-only)_
+- [x] Picture > Replace Picture from File
+- [x] Picture > Replace Picture from Assets
+- [x] Picture > Frame Properties
+- [-] Picture > Edit in PhotoPlus  _not offered (Windows-only, online service or WebPlus-only)_
+- [x] Picture > PhotoLab  (own version: crop, turn, light, colour, sharpen, vignette; 2026-10-18)
+- [-] Picture > Cutout Studio  _not offered (Windows-only, online service or WebPlus-only)_
+- [x] Picture > Colour Mapper
+- [x] Picture > Picture Transparency
+- [x] Group > Export As Single Graphic
+- [x] Form > Set Tab Order
+- [x] Form > Form Action
+- [x] Form > Unlock Form
+- [-] E-Commerce > Reformat  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] E-Commerce > Convert to Form  _not offered (Windows-only, online service or WebPlus-only)_
+- [x] Site Properties
+- [x] Page Properties
+
+## Format (10/27 done)
+- [x] Fill
+- [x] Line and Border
+- [x] Transparency
+- [x] Filter Effects
+- [x] Shadow
+- [-] Instant 3D  _not offered: 3D engine not offered_
+- [x] Watermarks
+- [-] Fill Mode > Alternate  _not offered: drawing-program feature_
+- [-] Fill Mode > Winding  _not offered: drawing-program feature_
+- [x] Flip  Rotate > Flip Horizontal
+- [x] Flip  Rotate > Flip Vertical
+- [x] Flip  Rotate > Rotate Left
+- [x] Flip  Rotate > Rotate Right
+- [-] Combine Curves  _not offered: drawing-program feature_
+- [-] Join Outlines > Add  _not offered: drawing feature_
+- [-] Join Outlines > Subtract  _not offered: drawing feature_
+- [-] Join Outlines > Intersect  _not offered: drawing feature_
+- [-] Join Outlines > Exclude  _not offered: drawing feature_
+- [-] Detach Line  _not offered: drawing-program feature_
+- [x] Crop to Shape  (17 shapes or your own drawn outline; 2026-10-18)
+- [-] Fit Hotspot to Shape  _not offered: drawing feature_
+- [x] Update Object Default
+- [-] Add Fill to Swatches Tab  _not offered: WebPlus tabs_
+- [-] Add Transparency to Transparency Tab  _not offered: WebPlus tabs_
+- [-] Object Style > Locate in Styles Tab  _not offered: WebPlus tabs_
+- [-] Object Style > Unlink  _not offered: WebPlus tabs_
+- [x] Object Style > Create
+
+## Text (20/46 done)
+- [x] Character
+- [x] Bullets and Numbering  (done 2026-10-17)
+- [x] Paragraph
+- [x] Hyperlink
+- [x] Clear Text Formatting  (done 2026-10-17)
+- [x] Update Text Style
+- [x] Text Style Palette
+- [x] Edit Story
+- [x] Find  Replace  (done 2026-10-17)
+- [x] Insert > Text Frame
+- [x] Insert > Artistic Text  (done 2026-10-17)
+- [x] Insert > Anchor
+- [x] Insert/Symbol > Line Break  (done 2026-10-17)
+- [x] Insert/Symbol > Non-Breaking Space  (done 2026-10-17)
+- [x] Insert/Symbol > Zero Width Space  (done 2026-10-17)
+- [x] Insert/Symbol > Bullet  (done 2026-10-17)
+- [x] Insert/Symbol > Dagger  (done 2026-10-17)
+- [x] Insert/Symbol > Copyright
+- [x] Insert/Symbol > Register  (done 2026-10-17)
+- [x] Insert/Symbol > Trademark  (done 2026-10-17)
+- [x] Insert/Symbol > Other
+- [x] Insert/Information > Date or Time  (done 2026-10-17)
+- [x] Insert/Information > Site Info
+- [x] Insert/Information > Page Info  (done 2026-10-17)
+- [x] Insert/Information > Object Info  (done 2026-10-17)
+- [-] Insert/Information > User Details  _not offered (Windows-only, online service or WebPlus-only)_
+- [x] Insert/Information > Variable  (done 2026-10-17)
+- [x] Insert > Text File
+- [x] Insert > Fill with Placeholder Text  (done 2026-10-17)
+- [x] Insert > HTML Fragment
+- [x] Spell Checker
+- [x] Proof Reader  (done 2026-10-17)
+- [x] Thesaurus  (done 2026-10-17)
+- [x] Change Case > Sentence case
+- [x] Change Case > lower case
+- [x] Change Case > UPPER CASE
+- [x] Change Case > Title Case
+- [x] Change Case > tOGGLE cASE  (done 2026-10-17)
+- [-] Toggle Character Code  _not offered: rarely used_
+- [-] Sort Wordlist  _not offered: WebPlus dictionary tool_
+- [x] AutoFit
+- [x] Overflowing Text > Hidden
+- [x] Overflowing Text > Overflow  (done 2026-10-17)
+- [x] Overflowing Text > Auto Scroll Bar  (done 2026-10-17)
+- [x] Overflowing Text > Fixed Scroll Bar  (done 2026-10-17)
+- [x] Fit Text to Path  (done 2026-10-17)
+
+## Table (8/27 done)
+- [x] AutoFormat  (done 2026-10-17)
+- [-] Edit AutoFormat  _covered by the AutoFormat presets plus Cell properties_
+- [-] Edit Calendar AutoFormat  _covered by the AutoFormat presets plus Cell properties_
+- [x] Convert to HTML Table
+- [x] Insert > Table
+- [x] Insert > Calendar  (done 2026-10-17)
+- [x] Insert > Rows
+- [x] Insert > Columns
+- [x] Select > Row(s)  (done 2026-10-17)
+- [x] Select > Column(s)  (done 2026-10-17)
+- [x] Select > All  (done 2026-10-17)
+- [x] Delete > Row(s)  (done 2026-10-17)
+- [x] Delete > Column(s)  (done 2026-10-17)
+- [x] Delete > Table
+- [x] Merge Cells  (done 2026-10-17)
+- [x] Separate Cells  (done 2026-10-17)
+- [x] Evenly Distribute Rows  (done 2026-10-17)
+- [x] Evenly Distribute Columns  (done 2026-10-17)
+- [x] AutoFit Column(s) to contents  (done 2026-10-17)
+- [x] AutoFit Row(s) to contents  (done 2026-10-17)
+- [x] Set Column Width(s)  (done 2026-10-17)
+- [x] Set Row Height(s)  (done 2026-10-17)
+- [x] Cell Properties  (done 2026-10-17)
+- [x] Vertical Text Alignment > Top
+- [x] Vertical Text Alignment > Centre
+- [x] Vertical Text Alignment > Bottom
+- [x] Sort  (done 2026-10-17)
+
+## Arrange (9/12 done)
+- [x] Snapping  (done 2026-10-17)
+- [x] Send to Back
+- [x] Bring to Front
+- [x] Back One
+- [x] Forward One
+- [x] Set Object Order  (done 2026-10-17)
+- [x] Align Objects
+- [x] Size Objects
+- [x] Group Objects
+- [x] Attach to Text  (done 2026-10-17)
+- [x] Attach to Right of Page
+- [x] Attach to Bottom of Page
+
+## Tools (11/36 done)
+- [x] Site Manager > Page Properties
+- [x] Site Manager > Master Page Properties
+- [x] Site Manager > HTML Page Properties  (done 2026-10-17)
+- [x] Site Manager > Hyperlink Manager  (done 2026-10-17)
+- [x] Site Manager > Anchor Manager
+- [x] Site Manager > Resource Manager
+- [-] Site Manager > E-Commerce Manager  _not offered (Windows-only, online service or WebPlus-only)_
+- [x] Site Manager > Text Manager  (done 2026-10-17)
+- [x] Site Manager > Font Manager  (done 2026-10-17)
+- [x] Site Manager > File Manager  (done 2026-10-17)
+- [-] Site Manager > Online Resource Manager  _not offered (Windows-only, online service or WebPlus-only)_
+- [x] Master Page Manager  (done 2026-10-17)
+- [x] Database Merge > Edit Database
+- [x] Database Merge > Repeating Area Layout
+- [x] Database Merge > Insert Text Field
+- [x] Database Merge > Insert Picture Field
+- [x] Database Merge > Insert Repeating Area
+- [-] Database Merge > Insert Repeating E-Commerce Area  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Database Merge > Insert Repeating E-Commerce Form  _not offered (Windows-only, online service or WebPlus-only)_
+- [x] Database Merge > Insert Repeating HTML Fragment
+- [x] Database Merge > Create Database
+- [-] Database Merge > Create E-Commerce Database  _not offered (Windows-only, online service or WebPlus-only)_
+- [x] Database Merge > Create Photo Database
+- [x] Database Merge > Merge to New Site
+- [x] Asset Manager
+- [x] Image Export Manager
+- [x] Colour Scheme Designer
+- [x] RSS Feed Manager
+- [-] E-Commerce Configuration  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Set User Details  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Calendar Event Manager  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Serif Web Resources  _not offered (Windows-only, online service or WebPlus-only)_
+- [x] Export > Export as Widget
+- [x] Export > Export as Picture
+- [x] Options
+- [x] Save Default Settings
+
+## Window (0/4 done)
+- [-] Cascade  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Tile Horizontally  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Tile Vertically  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Window List  _not offered (Windows-only, online service or WebPlus-only)_
+
+## Help (0/6 done)
+- [-] WebPlus Help  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Learning Assistant  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Online Resources  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Check for Update from Web  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] Registration Wizard  _not offered (Windows-only, online service or WebPlus-only)_
+- [-] About WebPlus  _not offered (Windows-only, online service or WebPlus-only)_
+
+## Added beyond the menu list
+- [x] Picture library (Assets panel > Picture library, or Insert menu): 5,184 Tabler icons (MIT) you can search and recolour, 33 real textures (ambientCG + Poly Haven, CC0), 87 Hero Patterns (CC BY 4.0, credited), plus 32 pictures Sitewright draws itself. Licences in sitewright/library/CREDITS.md
+- [x] Thinner Tools column, thin panel dividers, panel tabs along the top
+- [x] Right-click menus like WebPlus's pop-up menus: object menu (Cut/Copy/Paste, Edit properties, Hyperlink, HTML source, Arrange, Flip and rotate, Text and Picture items), a Table submenu (AutoFormat, Insert, Select, Delete, Merge, sizes, Fill down/right, Cell properties, Sort), and a page menu
+- [x] Calendar is in Insert > Calendar, Table > Insert calendar, and the page right-click Insert menu
+- [x] Edit Properties dialog (right-click > Edit properties, double-click a table/picture, Properties > Object properties, Alt+Enter): tabs per object kind, table dialog has a typing grid, AutoFormat and live sample
+- [x] Text boxes wrap at the box width (long words too) and the box height follows the text; 'Grow the box to fit the text' can be switched off in Edit properties (tests/test_textwrap.py)
+- [x] Renamed on screen to Website; files save as .site (old .sitewright still open); Startup Assistant in red, white and blue
+- [x] Text group finished: Find and Replace, bullets and numbering, Proof Reader, Thesaurus (WordNet), Insert date/time/page/site/object info and variables, placeholder text, artistic text on a curve (arch, bowl, wave, ring), Fit text to path, overflowing text options
+- [x] Managers group finished: Site Manager window (Tools > Site Manager: Pages, Hyperlinks with broken-link check, Fonts with substitution, Files, Text), Master Page Manager (several master pages, each page picks one), HTML pages with their own properties (file name, menu, description, search engines)
+- [x] Page items group finished: empty picture frame, rollover, pop-up rollover (preview shows while hovering in the editor), hotspot (5 shapes), animated GIF (plays in the editor), sound object and a page background sound, CAPTCHA question (checked by send.php) and reCAPTCHA (checked with Google), RSS reader (rss-reader.php helper, only listed feeds)
+- [x] Page tools group finished: rulers with draggable guides (and moving/deleting them), dynamic guides, snapping switches; Set Object Order, Select Parent, Attach to Text (under / beside, follows growth); Actions, CSS properties and HTML attributes editors
+
+- [x] Drawing tools: pen tool (click corners, drag curves), point editor (move, add, delete, smooth/corner, open/close), 17 ready-made shapes (Insert > Shape)  (2026-10-18)
+- [x] Blog (posts, categories, search, reader window, likes, moderated comments)  (2026-10-18)
+- [x] Web polls  (2026-10-18)
+- [x] Shop: products, product grid, cart; PayPal, Stripe, Shopify, WooCommerce  (2026-10-18)

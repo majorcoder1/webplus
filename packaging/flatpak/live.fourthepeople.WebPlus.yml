@@ -1,0 +1,81 @@
+# Flatpak recipe for WebPlus.
+# Build and install for yourself:
+#   flatpak-builder --user --install --force-clean build-dir packaging/flatpak/live.fourthepeople.WebPlus.yml
+# Make one file you can send to other people:
+#   flatpak-builder --force-clean --repo=repo build-dir packaging/flatpak/live.fourthepeople.WebPlus.yml
+#   flatpak build-bundle repo WebPlus.flatpak live.fourthepeople.WebPlus
+app-id: live.fourthepeople.WebPlus
+runtime: org.kde.Platform
+runtime-version: 5.15-25.08
+sdk: org.kde.Sdk
+base: com.riverbankcomputing.PyQt.BaseApp
+base-version: 5.15-25.08
+command: webplus
+finish-args:
+  - --share=ipc
+  - --socket=x11
+  - --socket=wayland
+  - --device=dri
+  - --share=network                 # FTP publishing, store imports, previews that fetch feeds
+  - --filesystem=home               # your sites and pictures can be anywhere in your home folder
+  - --talk-name=org.freedesktop.portal.*
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - /share/man
+  - /share/info
+  - '*.la'
+modules:
+  - name: aspell                    # the spell checker
+    buildsystem: autotools
+    build-options:
+      env:
+        CXXFLAGS: -O2 -fpermissive  # this older release needs the relaxed rule to compile with a current compiler
+    config-opts:
+      - --disable-curses            # WebPlus only uses aspell's pipe mode, not its terminal screen
+    sources:
+      - type: archive
+        url: https://ftp.gnu.org/gnu/aspell/aspell-0.60.8.1.tar.gz
+        sha256: d6da12b34d42d457fa604e435ad484a74b2effcd120ff40acd6bb3fb2887d21b
+  - name: aspell-en                 # its English word list (its own configure takes no options)
+    buildsystem: simple
+    build-options:
+      env:
+        PATH: /app/bin:/usr/bin
+        LD_LIBRARY_PATH: /app/lib
+    build-commands:
+      - ./configure
+      - make
+      - make install
+    sources:
+      - type: archive
+        url: https://ftp.gnu.org/gnu/aspell/dict/en/aspell6-en-2020.12.07-0.tar.bz2
+        sha256: 4c8f734a28a088b88bb6481fcf972d0b2c3dc8da944f7673283ce487eac49fb3
+  - name: pillow                    # picture effects, PhotoLab, phone-photo turning
+    buildsystem: simple
+    build-options:
+      build-args:
+        - --share=network           # downloads the wheel while building (use flatpak-pip-generator for an offline recipe)
+    build-commands:
+      - pip3 install --prefix=/app --no-cache-dir "pillow==10.4.0"
+  - name: webplus
+    buildsystem: simple
+    sources:
+      - type: dir
+        path: ../..
+        skip:
+          - .git
+          - build-dir
+          - repo
+          - .flatpak-builder
+          - tests
+          - docs/img
+    build-commands:
+      - mkdir -p /app/share/webplus
+      - cp -r sitewright sitewright.py icons LICENSE README.md /app/share/webplus/
+      - install -Dm755 packaging/flatpak/webplus.sh /app/bin/webplus
+      - install -Dm644 packaging/flatpak/live.fourthepeople.WebPlus.desktop /app/share/applications/live.fourthepeople.WebPlus.desktop
+      - install -Dm644 packaging/flatpak/live.fourthepeople.WebPlus.metainfo.xml /app/share/metainfo/live.fourthepeople.WebPlus.metainfo.xml
+      - install -Dm644 packaging/flatpak/live.fourthepeople.WebPlus.mime.xml /app/share/mime/packages/live.fourthepeople.WebPlus.xml
+      - for s in 16 22 24 32 48 64 128 256 512; do install -Dm644 icons/sitewright-$s.png /app/share/icons/hicolor/${s}x${s}/apps/live.fourthepeople.WebPlus.png; done
+      - install -Dm644 icons/sitewright.svg /app/share/icons/hicolor/scalable/apps/live.fourthepeople.WebPlus.svg

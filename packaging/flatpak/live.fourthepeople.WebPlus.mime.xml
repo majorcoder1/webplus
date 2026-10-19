@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="application/x-sitewright">
+    <comment>WebPlus site</comment>
+    <glob pattern="*.site"/>
+    <glob pattern="*.sitewright"/>
+    <icon name="live.fourthepeople.WebPlus"/>
+  </mime-type>
+</mime-info>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>live.fourthepeople.WebPlus</id>
+  <name>WebPlus</name>
+  <summary>Design and publish websites by dragging things onto a page</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <developer id="live.fourthepeople"><name>4ThePeople Media</name></developer>
+  <url type="homepage">https://4thepeople.live</url>
+  <description>
+    <p>WebPlus is a website designer. Drag text, pictures, buttons, forms, shapes and more onto a page, link
+    the pages together, and publish a clean site that fits any screen from a phone to a wide monitor. The
+    finished site is plain files you put on your own web host. There is no account and no subscription.</p>
+    <p>It includes a pen tool and shape editor, PhotoLab and picture effects, Database Merge, a blog with
+    comments, web polls, a shop with PayPal, Stripe, Shopify and WooCommerce, PDF export, and an FTP publisher.</p>
+  </description>
+  <categories>
+    <category>Development</category>
+    <category>WebDevelopment</category>
+    <category>Graphics</category>
+  </categories>
+  <launchable type="desktop-id">live.fourthepeople.WebPlus.desktop</launchable>
+  <provides><mediatype>application/x-sitewright</mediatype></provides>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="1.2.0" date="2026-10-18">
+      <description><p>Blog, web polls and a shop; pen tool, shapes, crop to shape and PhotoLab; Database Merge; PDF export with clickable links.</p></description>
+    </release>
+  </releases>
+</component>

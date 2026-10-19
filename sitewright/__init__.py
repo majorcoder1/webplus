@@ -1,0 +1,2 @@
+"""Sitewright - a website designer."""
+__version__ = "1.2.0"

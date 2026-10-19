@@ -1,0 +1,27 @@
+# Builds the Flatpak file (WebPlus.flatpak) on every push, and attaches it to a release when you publish one.
+name: Flatpak
+on:
+  push:
+    branches: [main]
+  pull_request:
+  release:
+    types: [published]
+jobs:
+  flatpak:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/flathub-infra/flatpak-github-actions:kde-5.15-25.08
+      options: --privileged
+    steps:
+      - uses: actions/checkout@v4
+      - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+        with:
+          bundle: WebPlus.flatpak
+          manifest-path: packaging/flatpak/live.fourthepeople.WebPlus.yml
+          cache-key: flatpak-builder-${{ github.sha }}
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y python3-pyqt5 python3-pil php-cli poppler-utils mupdf-tools
+      - run: bash tests/run_all.sh
