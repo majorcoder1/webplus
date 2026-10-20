@@ -7,3 +7,7 @@ repo/
 *.tmp
 .site-backup/
 dist/
+.venv-mac/
+build/
+packaging/macos/WebPlus.icns
+*.spec

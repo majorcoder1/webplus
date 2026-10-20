@@ -6,6 +6,7 @@ It is built on, and ships with, the following. Each keeps its own licence.
 | What | Used for | Licence |
 |---|---|---|
 | Qt 5 and PyQt5 | the whole window and drawing system | LGPL-3.0 (Qt), GPL-3.0 (PyQt5) |
+| PyInstaller (Mac build only) | packs the Mac app | GPL-2.0 with the bootloader exception |
 | Pillow | picture effects, PhotoLab, turning phone photos | HPND (Pillow licence) |
 | GNU Aspell and its English word list | the spell checker (Flatpak build) | LGPL-2.1 / word list: permissive |
 | WordNet 3.0, Princeton University | the thesaurus (`sitewright/library/thesaurus.json.gz`) | WordNet licence (`sitewright/library/LICENSE-wordnet.txt`) |

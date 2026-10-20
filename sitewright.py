@@ -13,6 +13,30 @@ from sitewright import __version__  # noqa: E402
 from sitewright.window import APP, MainWindow, apply_ui_font, saved_ui_pt  # noqa: E402
 
 
+def selftest():
+    """Checks that a packaged copy can start, find its pictures and word lists, and write a site. Used by the build."""
+    import tempfile
+    os.environ["QT_QPA_PLATFORM"] = "offscreen"
+    app = QApplication(sys.argv[:1])
+    from sitewright import export, library, thesaurus
+    from sitewright.model import new_item
+    w = MainWindow()
+    w.cur_page()["items"].append(new_item("text", 20, 20, text="Hello"))
+    out = tempfile.mkdtemp()
+    export.export_site(w.doc, out)
+    assert os.path.exists(os.path.join(out, "index.html")), "export failed"
+    root = os.path.join(os.path.dirname(os.path.abspath(library.__file__)), "library")
+    assert os.path.isfile(os.path.join(root, "icons.json")), "picture library missing"
+    assert os.path.isfile(os.path.join(root, "thesaurus.json.gz")), "thesaurus missing"
+    try:
+        import PIL  # noqa: F401
+        pil = "yes"
+    except ImportError:
+        pil = "NO"
+    print("SELFTEST OK  version %s  pillow %s" % (__version__, pil))
+    return 0
+
+
 def main():
     if "--version" in sys.argv[1:]:
         print("WebPlus " + __version__)
@@ -21,6 +45,8 @@ def main():
         print("Usage: webplus [file.site]\n\nOpens the website designer. "
               "Give a .site file (or an older .sitewright file) to open it straight away.")
         return
+    if "--selftest" in sys.argv[1:]:
+        raise SystemExit(selftest())
     app = QApplication(sys.argv)
     app.setApplicationName(APP)
     app.setApplicationVersion(__version__)

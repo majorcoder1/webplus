@@ -1,0 +1,39 @@
+# Builds WebPlus for Mac (Apple Silicon and Intel) as a .dmg, and attaches them to a release when you publish one.
+name: macOS
+on:
+  push:
+    branches: [main]
+  release:
+    types: [published]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  mac:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-latest        # Apple Silicon (M1 and newer)
+            chip: arm64
+          - os: macos-15-intel      # Intel Macs
+            chip: x86_64
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build WebPlus.app and the .dmg
+        run: bash packaging/macos/build.sh
+      - name: Check the built app starts and can write a site
+        run: dist/WebPlus.app/Contents/MacOS/WebPlus --selftest
+      - uses: actions/upload-artifact@v4
+        with:
+          name: WebPlus-macOS-${{ matrix.chip }}
+          path: dist/WebPlus-macOS-*.dmg
+      - name: Attach to the release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "${{ github.event.release.tag_name }}" dist/WebPlus-macOS-*.dmg --clobber

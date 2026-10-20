@@ -35,6 +35,22 @@ flatpak-builder --force-clean --repo=repo build-dir packaging/flatpak/live.fourt
 flatpak build-bundle repo WebPlus.flatpak live.fourthepeople.WebPlus
 ```
 
+### On a Mac
+
+Download `WebPlus-macOS-arm64.dmg` (Apple Silicon: M1 and newer) or `WebPlus-macOS-x86_64.dmg` (Intel) from the
+Releases page. Open it and drag **WebPlus** into **Applications**.
+
+The first time, macOS says it cannot check the app, because it is not signed with a paid Apple developer account.
+This is normal for free software. To open it: in **Applications**, hold Control and click **WebPlus**, choose **Open**,
+then **Open** again. If macOS still refuses, open Terminal and run:
+
+```bash
+xattr -dr com.apple.quarantine /Applications/WebPlus.app
+```
+
+The spell checker needs `aspell` on a Mac (`brew install aspell`); everything else is built in. To build the Mac app
+yourself on a Mac: `bash packaging/macos/build.sh`.
+
 ### From the source files
 
 You need Python 3 and PyQt5, plus Pillow for picture effects and PhotoLab. On Linux Mint, Ubuntu or Debian:
