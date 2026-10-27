@@ -156,3 +156,9 @@ Run the tests with `bash tests/run_all.sh`; each line must say `ALL GOOD`. They 
 settings folder. `tools/sweep.py` clicks every menu command on every kind of object and
 reports any error (run it with `XDG_CONFIG_HOME=$(mktemp -d)` so it cannot change your settings).
 `tests/test_php.py` starts PHP's own web server to check the sign-in and sign-up pages.
+
+## Support
+
+This project is free and open source. If it is useful to you, you can support my work with a donation:
+
+[![Donate using Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/majorcoder1/donate)
